@@ -14,6 +14,9 @@
 		480C891E1CF6961100875816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 480C891C1CF6961100875816 /* LaunchScreen.storyboard */; };
 		480C89291CF6961100875816 /* Assignment_2__CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C89281CF6961100875816 /* Assignment_2__CarouselTests.swift */; };
 		480C89341CF6961100875816 /* Assignment_2__CarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C89331CF6961100875816 /* Assignment_2__CarouselUITests.swift */; };
+		480C89441CF6979300875816 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C89431CF6979300875816 /* Common.swift */; };
+		480C89461CF6983600875816 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C89451CF6983600875816 /* IntroViewController.swift */; };
+		480C89491CF6A0DE00875816 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480C89481CF6A0DE00875816 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		480C892F1CF6961100875816 /* Assignment 2: CarouselUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Assignment 2: CarouselUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		480C89331CF6961100875816 /* Assignment_2__CarouselUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment_2__CarouselUITests.swift; sourceTree = "<group>"; };
 		480C89351CF6961100875816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		480C89431CF6979300875816 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		480C89451CF6983600875816 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		480C89481CF6A0DE00875816 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +106,11 @@
 				480C89131CF6961100875816 /* AppDelegate.swift */,
 				480C89151CF6961100875816 /* ViewController.swift */,
 				480C89171CF6961100875816 /* Main.storyboard */,
+				480C89471CF6984100875816 /* View Controllers */,
 				480C891A1CF6961100875816 /* Assets.xcassets */,
 				480C891C1CF6961100875816 /* LaunchScreen.storyboard */,
 				480C891F1CF6961100875816 /* Info.plist */,
+				480C89431CF6979300875816 /* Common.swift */,
 			);
 			path = "Assignment 2: Carousel";
 			sourceTree = "<group>";
@@ -123,6 +131,15 @@
 				480C89351CF6961100875816 /* Info.plist */,
 			);
 			path = "Assignment 2: CarouselUITests";
+			sourceTree = "<group>";
+		};
+		480C89471CF6984100875816 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				480C89481CF6A0DE00875816 /* LoginViewController.swift */,
+				480C89451CF6983600875816 /* IntroViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				480C89161CF6961100875816 /* ViewController.swift in Sources */,
+				480C89441CF6979300875816 /* Common.swift in Sources */,
 				480C89141CF6961100875816 /* AppDelegate.swift in Sources */,
+				480C89491CF6A0DE00875816 /* LoginViewController.swift in Sources */,
+				480C89461CF6983600875816 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
