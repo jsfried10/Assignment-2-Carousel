@@ -14,8 +14,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var loginScrollview: UIScrollView!
    
     @IBOutlet weak var buttonParentView: UIView!
-    
     @IBOutlet weak var fieldParentView: UIView!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     var buttonInitialY: CGFloat!
     var buttonOffset: CGFloat!
@@ -80,6 +84,82 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             view.endEditing(true)
         }
     }
+    
+    @IBAction func didPressLogin(sender: AnyObject) {
+        if emailField.text!.isEmpty || passwordField.text!.isEmpty {
+        
+            let alertController = UIAlertController(title: "Email Required", message: "Please enter an email and password", preferredStyle: .Alert)
+            
+            // create a cancel action
+            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+                // handle cancel response here. Doing nothing will dismiss the view.
+            }
+            // add the cancel action to the alertController
+            alertController.addAction(cancelAction)
+            
+            presentViewController(alertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+            }
+            
+        } else {
+            loginIndicator.startAnimating()
+            
+            delay(2, closure: { 
+                if self.emailField.text == "email" && self.passwordField.text == "pass" {
+                    self.loginIndicator.stopAnimating()
+                    self.performSegueWithIdentifier("LoginSegue", sender: nil)
+
+                } else {
+                    self.loginIndicator.stopAnimating()
+
+                    let alertController = UIAlertController(title: "Please Try Again", message: "Your email and password were incorrect", preferredStyle: .Alert)
+                    
+                    // create a cancel action
+                    let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+                        // handle cancel response here. Doing nothing will dismiss the view.
+                    }
+                    // add the cancel action to the alertController
+                    alertController.addAction(cancelAction)
+                    
+                    self.presentViewController(alertController, animated: true) {
+                        // optional code for what happens after the alert controller has finished presenting
+                    }
+                }
+            })
+
+        
+        }
+//        // If both the email and password fields match what we are looking for...
+//        if emailField.text == "Text we are looking for" && passwordField.text == "Other text we are looking for" {
+//            // Delay for 2 second.
+//            delay(2, closure: { () -> () in
+//                // Stop animating the activity indicator.
+//                self.loginIndicator.stopAnimating()
+//                // Set the button state back to default, "Not Selected".
+//                self.loginButton.selected = false
+//                // perform the Segue to the next screen.
+//                self.performSegueWithIdentifier("LoginSegue", sender: nil)
+//            })
+//            // Otherwise, email or password are incorrect so...
+//        } else {
+//            // Delay for 2 second
+//            delay(2, closure: { () -> () in
+//                // Stop animating the activity indicator.
+//                self.loginIndicator.stopAnimating()
+//                // Set the button state back to default, "Not Selected".
+//                self.loginButton.selected = false
+//                // Create and Show UIAlertController...see guide, Using UIAlertController
+//            })
+//        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
