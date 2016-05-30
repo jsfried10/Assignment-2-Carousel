@@ -235,16 +235,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="zj7-Di-jSz">
-                                        <rect key="frame" x="8" y="373" width="153" height="152"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile2" id="3Bh-AZ-rga">
                                         <rect key="frame" x="200" y="748" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile3" id="Ewm-ln-cm7">
-                                        <rect key="frame" x="200" y="826" width="76" height="76"/>
+                                        <rect key="frame" x="200" y="825" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile4" id="oFb-bK-qzY">
@@ -256,7 +252,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="a2T-oP-A2q">
-                                        <rect key="frame" x="200" y="904" width="76" height="75"/>
+                                        <rect key="frame" x="199" y="902" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Igv-vI-QW2" userLabel="Sign In">
@@ -266,6 +262,10 @@
                                             <segue destination="BYZ-38-t0r" kind="push" animates="NO" id="1W6-tl-70L"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="zj7-Di-jSz">
+                                        <rect key="frame" x="46" y="748" width="153" height="152"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -276,7 +276,12 @@
                     <size key="freeformSize" width="320" height="1136"/>
                     <connections>
                         <outlet property="introImage" destination="Cye-qR-LNC" id="q2D-t0-Wj0"/>
+                        <outlet property="introImageFour" destination="a2T-oP-A2q" id="C9K-aI-uVH"/>
                         <outlet property="introImageOne" destination="zj7-Di-jSz" id="zPV-Ae-ijf"/>
+                        <outlet property="introImageSix" destination="oFb-bK-qzY" id="K8m-XZ-BKb"/>
+                        <outlet property="introImageThree" destination="Ewm-ln-cm7" id="sze-JR-qT5"/>
+                        <outlet property="introImageTwo" destination="3Bh-AZ-rga" id="Mdg-9a-G69"/>
+                        <outlet property="introImagefive" destination="JzP-Tg-c4K" id="OzD-ar-f3P"/>
                         <outlet property="scrollView" destination="e4w-fa-TEN" id="dp5-ZH-lva"/>
                     </connections>
                 </viewController>

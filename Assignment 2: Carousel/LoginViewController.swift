@@ -88,7 +88,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func didPressLogin(sender: AnyObject) {
         if emailField.text!.isEmpty || passwordField.text!.isEmpty {
         
-            let alertController = UIAlertController(title: "Email Required", message: "Please enter an email and password", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Email and Password Required", message: "Please enter an email and password", preferredStyle: .Alert)
             
             // create a cancel action
             let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
@@ -129,28 +129,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
 
         
         }
-//        // If both the email and password fields match what we are looking for...
-//        if emailField.text == "Text we are looking for" && passwordField.text == "Other text we are looking for" {
-//            // Delay for 2 second.
-//            delay(2, closure: { () -> () in
-//                // Stop animating the activity indicator.
-//                self.loginIndicator.stopAnimating()
-//                // Set the button state back to default, "Not Selected".
-//                self.loginButton.selected = false
-//                // perform the Segue to the next screen.
-//                self.performSegueWithIdentifier("LoginSegue", sender: nil)
-//            })
-//            // Otherwise, email or password are incorrect so...
-//        } else {
-//            // Delay for 2 second
-//            delay(2, closure: { () -> () in
-//                // Stop animating the activity indicator.
-//                self.loginIndicator.stopAnimating()
-//                // Set the button state back to default, "Not Selected".
-//                self.loginButton.selected = false
-//                // Create and Show UIAlertController...see guide, Using UIAlertController
-//            })
-//        }
         
     }
     
